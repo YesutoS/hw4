@@ -1,18 +1,20 @@
-<h1>Login</h1>
+<div>
+<h1 class="text ps-4">Login</h1>
+</div>
 
 <%= form_with url: "/sessions" do |form| %>
   
-  <p>
-    <%= form.label "email" %>
-    <%= form.text_field "email" %>
-  </p>
+  <div class="mb-3">
+    <%= form.label "email", class: "form-label" %>
+    <%= form.text_field "email", class: "form-control" %>
+  </div>
 
-  <p>
-    <%= form.label "password" %>
-    <%= form.password_field "password" %>
-  </p>
+  <div class="mb-3">
+    <%= form.label "password", class: "form-label" %>
+    <%= form.password_field "password", class: "form-control" %>
+  </div>
 
-  <p>
-    <%= form.submit "Login" %>
-  </p>
+  <div class="mb-3">
+    <%= form.submit "Login", class: "btn btn-primary" %>
+  </div>
 <% end %>
